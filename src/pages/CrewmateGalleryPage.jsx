@@ -5,7 +5,7 @@ const CrewmateGalleryPage = () => {
         <div>
             <h1>Crewmate Gallery Page</h1>
             <ul>
-                <li><Link to=":id">Crewmate Details</Link></li>
+                <li><Link to="crewmates">Crewmate Details</Link></li>
             </ul>
             <div className="primary-content">
                 <Outlet />
