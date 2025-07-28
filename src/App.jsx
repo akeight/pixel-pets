@@ -1,23 +1,24 @@
 import { useRoutes } from 'react-router-dom'
 import './App.css'
 import HomePage from './pages/HomePage.jsx'
-import CrewmateDetailsPage from './pages/CrewmateDetailsPage.jsx'
-import NewCrewmatePage from './pages/NewCrewmatePage.jsx'
-import CrewmateGalleryPage from './pages/CrewmateGalleryPage.jsx'
-import UpdateCrewmatePage from './pages/UpdateCrewmatePage.jsx'
+import CharacterDetailsPage from './pages/CharacterDetailsPage.jsx'
+import AddCharacterPage from './pages/AddCharacterPage.jsx'
+import CharacterGalleryPage from './pages/CharacterGalleryPage.jsx'
+import UpdateCharacterPage from './pages/UpdateCharacterPage.jsx'
 import Layout from './components/Layout.jsx'
 
 function App() {
+
   const routes = [
     {
       path: '/',
       element: <Layout />,
       children: [
         { index: true, element: <HomePage /> },
-        { path: 'new-crewmate', element: <NewCrewmatePage /> },
-        { path: 'crewmates', element: <CrewmateGalleryPage /> },
-        { path: 'crewmates/:id', element: <CrewmateDetailsPage /> },
-        { path: 'crewmates/:id/edit', element: <UpdateCrewmatePage /> },
+        { path: 'new-character', element: <AddCharacterPage /> },
+        { path: 'characters', element: <CharacterGalleryPage /> },
+        { path: 'characters/:id', element: <CharacterDetailsPage /> },
+        { path: 'characters/:id/edit', element: <UpdateCharacterPage /> },
       ],
     },
   ]

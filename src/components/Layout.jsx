@@ -4,7 +4,7 @@ const Layout = () => {
     return ( 
         <>
           <div className="header">
-              <h1>Crewmates!</h1>
+              <h1>Pixel Pets!</h1>
               <p></p>
             </div>
           <div className="app-container">
@@ -12,8 +12,8 @@ const Layout = () => {
               <div className="sidebar-components">
                 <ul>
                   <li><Link to="/">Home</Link></li>
-                  <li><Link to="/new-crewmate">Create a Crewmate</Link></li>
-                  <li><Link to="/crewmates">Crewmate Gallery</Link></li>
+                  <li><Link to="/new-character">Create a Character</Link></li>
+                  <li><Link to="/characters">Character Gallery</Link></li>
           
                 </ul>
               </div>

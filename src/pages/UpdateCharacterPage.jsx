@@ -1,14 +1,17 @@
-const UpdateCrewmatePage = () => {
+import EditCharacterForm from "../components/EditCharacterForm";
+
+const UpdateCharacterPage = () => {
     return (
         <div>
-            <h1>Update Crewmate Page</h1>
+            <h1>Update Character Page</h1>
+            <EditCharacterForm />
             <button>Save</button>
             <button>Delete</button>
         </div>
     );
 }
 
-export default UpdateCrewmatePage;
+export default UpdateCharacterPage;
 
 // UPDATE
 // Each crewmate has an edit button that will take users to an update form for the relevant crewmate
