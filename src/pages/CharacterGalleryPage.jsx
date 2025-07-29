@@ -22,10 +22,11 @@ const CharacterGalleryPage = () => {
         fetchCharacters();
     }, []);  
 
+
     return (
         <div>
             <h1>Character Gallery Page</h1>
-            <p>Here is a list of all your characters</p>
+            <p>You have {characters.length} pixel pets!</p>
             <CharacterList characters={characters} />
             <div className="primary-content">
                 <Outlet />

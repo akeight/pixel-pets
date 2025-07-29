@@ -2,7 +2,7 @@ import CharacterCard from './CharacterCard';
 
 function CharacterList({ characters }) {
   if (!characters || characters.length === 0) {
-    return <p>No characters found, baby 😢</p>;
+    return <p>No pixel pets found!</p>;
   }
 
   return (

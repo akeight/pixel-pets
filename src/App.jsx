@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage.jsx'
 import CharacterDetailsPage from './pages/CharacterDetailsPage.jsx'
 import AddCharacterPage from './pages/AddCharacterPage.jsx'
 import CharacterGalleryPage from './pages/CharacterGalleryPage.jsx'
-import UpdateCharacterPage from './pages/UpdateCharacterPage.jsx'
+import EditCharacterPage from './pages/EditCharacterPage.jsx'
 import Layout from './components/Layout.jsx'
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         { path: 'new-character', element: <AddCharacterPage /> },
         { path: 'characters', element: <CharacterGalleryPage /> },
         { path: 'characters/:id', element: <CharacterDetailsPage /> },
-        { path: 'characters/:id/edit', element: <UpdateCharacterPage /> },
+        { path: '/edit/:id', element: <EditCharacterPage /> },
       ],
     },
   ]

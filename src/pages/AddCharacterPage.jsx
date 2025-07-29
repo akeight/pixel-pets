@@ -6,9 +6,9 @@ const AddCharacterPage = () => {
     const [character, setCharacter] = useState({
         character_name: '',
         class: '',
-        protection: '',
-        agility: '',
-        speed: '',
+        protection: '0',
+        agility: '0',
+        speed: '0',
     });
 
     const handleChange = (e) => {
@@ -29,6 +29,7 @@ const AddCharacterPage = () => {
         window.location = "/";
     }
   };
+
 
     return (
         <div>

@@ -30,6 +30,7 @@ const CharacterDetailsPage = () => {
         fetchCharacter();
     }, [id]);
 
+   
     if (loading) return <p>Loading character details…</p>;
     if (!character) return <p>No character found!</p>;
 

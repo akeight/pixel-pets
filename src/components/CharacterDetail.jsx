@@ -12,7 +12,7 @@ const CharacterDetails = ({character}) => {
       <p>Speed: {character.speed}</p>
       <p>Created: {character.created_at}</p>
       {/* Add more spicy details here */}
-      <Link to="edit">Edit Character</Link>
+      <Link to={`/edit/${character.id}`}>Edit Character</Link>
     </div>
   );
 }

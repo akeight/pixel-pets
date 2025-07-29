@@ -1,4 +1,8 @@
+import { useFormStatus } from "react-dom"
+
 function AddCharacterForm({ character, onChange, onSubmit }) {
+    const { pending } = useFormStatus();
+
   return (
     <form onSubmit={onSubmit}>
       <label>Name:</label>
@@ -9,13 +13,28 @@ function AddCharacterForm({ character, onChange, onSubmit }) {
         onChange={onChange}
       />
 
-      <label>Class:</label>
+      <label>Type:</label>
+      <label>
       <input
-        type="text"
+        type="radio"
         name="class"
-        value={character.class}
+        value="Femme Fatale"
         onChange={onChange}
-      />
+      />Femme Fatale</label>
+      <label>
+      <input
+        type="radio"
+        name="class"
+        value="Pixel Prince"
+        onChange={onChange}
+      />Pixel Prince</label>
+      <label>
+      <input
+        type="radio"
+        name="class"
+        value="Chaotic Creature"
+        onChange={onChange}
+      />Chaotic Creature</label>
 
       <label>Protection:</label>
       <input
@@ -36,13 +55,15 @@ function AddCharacterForm({ character, onChange, onSubmit }) {
       <label>Speed:</label>
       <input
         type="number"
-        name="Speed"
+        name="speed"
         value={character.speed}
         onChange={onChange}
       />
 
       {/* Add other fields like agility, speed, etc. */}
-      <button type="submit">Add Character!</button>
+      <button type="submit">
+        {pending ? "Adding..." : "Add Character"}
+      </button>
     </form>
   );
 }
