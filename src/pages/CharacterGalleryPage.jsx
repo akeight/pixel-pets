@@ -11,7 +11,7 @@ const CharacterGalleryPage = () => {
             const {data, error} = await supabase
                 .from('pixel_pets')
                 .select()
-                .order('created_at', { ascending: true })
+                .order('created_at', { ascending: false })
             
             if 
                 (error) console.log('Error getting characters');

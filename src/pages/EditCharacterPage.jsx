@@ -1,36 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import EditCharacterForm from "../components/EditCharacterForm";
 import { supabase } from "../client";
 
-const EditCharacterPage = ({data}) => {
+const EditCharacterPage = () => {
+    const { id } = useParams();
+    console.log("Edit route ID:", id);
+
     const [character, setCharacter] = useState({
         character_name: '',
         class: '',
         protection: '0',
         agility: '0',
         speed: '0',
+        img_Url: '',
     });
-    const { id } = useParams;
-    console.log("Edit route ID:", id);
 
-    // useEffect(() => {
-    //     async function fetchCharacter() {
-    //         const { data, error } = await supabase
-    //             .from('pixel_pets')
-    //             .select()
-    //             .eq('id', id)
-    //             .single();
+    useEffect(() => {
+        async function fetchCharacter() {
+            const { data, error } = await supabase
+                .from('pixel_pets')
+                .select()
+                .eq('id', id)
+                .single();
 
-    //             if (error) {
-    //                 console.error('Error fetching character:', error);
-    //             } else {
-    //             setCharacter(data);
-    //             }
-    //     }
+                if (error) {
+                    console.error('Error fetching character:', error);
+                } else {
+                setCharacter(data);
+                }
+        }
 
-    //     fetchCharacter();
-    //     }, [id]);
+        fetchCharacter();
+        }, [id]);
 
 
     const editCharacter = async (e) => {
@@ -65,23 +67,13 @@ const EditCharacterPage = ({data}) => {
         }
     };
 
-    const handleChange = (event) => {
-        const {name, value} = event.target
-        setCharacter( (prev) => {
-            return {
-                ...prev,
-                [name]:value,
-            }
-        })
-    }
-
-     
 
     return (
         <div>
             <h1>Update Character Page</h1>
             <EditCharacterForm character={character} setCharacter={setCharacter} onSubmit={editCharacter} onDelete={deleteCharacter}/>
         </div>
+        
     );
 }
 

@@ -18,7 +18,7 @@ function App() {
         { path: 'new-character', element: <AddCharacterPage /> },
         { path: 'characters', element: <CharacterGalleryPage /> },
         { path: 'characters/:id', element: <CharacterDetailsPage /> },
-        { path: '/edit/:id', element: <EditCharacterPage /> },
+        { path: 'edit/:id', element: <EditCharacterPage /> },
       ],
     },
   ]

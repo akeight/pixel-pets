@@ -9,10 +9,35 @@ const AddCharacterPage = () => {
         protection: '0',
         agility: '0',
         speed: '0',
+        img_Url: '',
     });
 
-    const handleChange = (e) => {
-    setCharacter({ ...character, [e.target.name]: e.target.value });
+    const imageOptions = {
+    Femme_Fatale: [
+      "/src/assets/pet-imgs/girl-1.png", 
+      "/src/assets/pet-imgs/girl-2.png",
+      "/src/assets/pet-imgs/girl-3.png",
+      "/src/assets/pet-imgs/girl-4.png",
+      "/src/assets/pet-imgs/girl-5.png",
+      "/src/assets/pet-imgs/girl-6.png"
+    ],
+    Pixel_Prince: [
+      "/src/assets/pet-imgs/boy-1.png", 
+      "/src/assets/pet-imgs/boy-2.png",
+      "/src/assets/pet-imgs/boy-3.png",
+      "/src/assets/pet-imgs/boy-4.png",
+      "/src/assets/pet-imgs/boy-5.png",
+      "/src/assets/pet-imgs/boy-6.png",
+    ],
+    Cozy_Creature: [
+      "/src/assets/pet-imgs/creature-1.png",
+      "/src/assets/pet-imgs/creature-2.png",
+      "/src/assets/pet-imgs/creature-3.png",
+      "/src/assets/pet-imgs/creature-4.png",
+      "/src/assets/pet-imgs/creature-5.png",
+      "/src/assets/pet-imgs/creature-6.png",
+      "/src/assets/pet-imgs/creature-7.png",
+    ],
   };
 
     const addCharacter = async (event) => {
@@ -26,15 +51,26 @@ const AddCharacterPage = () => {
                 console.error('Error adding character:', error);
             } else {
                 console.log('Character added:', data);
-        window.location = "/";
+        window.location = "/characters";
     }
   };
 
+  const handleChange = (e) => {
+    setCharacter({ ...character, [e.target.name]: e.target.value });
+  };
+
+  const handleCategoryChange = (e) => {
+    const category = e.target.value;
+    setCharacter((prev) => ({ ...prev, class: category, img_Url: "" }));
+  };
+
+  const handleImageSelect = (img) => {
+    setCharacter((prev) => ({ ...prev, img_Url: img }));
+  };
 
     return (
         <div>
-            <h1>New Character Page</h1>
-            <AddCharacterForm character={character} onChange={handleChange} onSubmit={addCharacter}/>
+            <AddCharacterForm character={character} handleImageSelect={handleImageSelect} handleCategoryChange={handleCategoryChange} handleChange={handleChange} onSubmit={addCharacter} imageOptions={imageOptions}/>
         </div>
     );
 }

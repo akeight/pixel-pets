@@ -2,15 +2,19 @@ import { Link } from "react-router-dom";
 
 const CharacterDetails = ({character}) => {
 
+  const createdAtUTC = character.created_at;
+  const localDate = new Date(createdAtUTC);
+  const formatted = localDate.toLocaleString();
+
   return (
     <div className="character-details">
-        {/* image */}
+      <img src={character.img_Url} alt={character.character_name} />
       <h1>{character.character_name}</h1>
       <p>Class: {character.class}</p>
       <p>Protection: {character.protection}</p>
       <p>Agility: {character.agility}</p>
       <p>Speed: {character.speed}</p>
-      <p>Created: {character.created_at}</p>
+      <p>Created: {formatted}</p>
       {/* Add more spicy details here */}
       <Link to={`/edit/${character.id}`}>Edit Character</Link>
     </div>
