@@ -6,11 +6,13 @@ function CharacterList({ characters }) {
   }
 
   return (
+  
     <div className="grid">
       {characters.map((char) => (
         <CharacterCard key={char.id} character={char} />
       ))}
     </div>
+    
   );
 }
 

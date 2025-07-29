@@ -2,6 +2,7 @@ import { Outlet} from "react-router-dom";
 import { supabase } from "../client";
 import { useEffect, useState } from "react";
 import CharacterList from "../components/CharacterList";
+import CharacterStatsChart from "../components/CharacterStatsChart";
 
 const CharacterGalleryPage = () => {
     const [characters, setCharacter]= useState([]);
@@ -25,11 +26,10 @@ const CharacterGalleryPage = () => {
 
     return (
         <>
-            <div className="home-landing">
-            <h2>Pixel Pet Hub</h2>
-            <h4>You have {characters.length} pixel pets!</h4>
-            </div>
+            <CharacterStatsChart characters={characters} />
+
             <CharacterList characters={characters} />
+
             <div className="primary-content">
                 <Outlet />
             </div>
