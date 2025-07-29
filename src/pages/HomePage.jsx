@@ -25,9 +25,11 @@ const HomePage = () => {
         <h4>
             Ready to start? Bring your first pixel hero to life!
         </h4>
-       <button className="home-create">
-            <Link to="/new-character">Create Your Character</Link>
-        </button>
+       
+            <Link to="/new-character">
+            <button className="home-create">Create Your Character</button>
+            </Link>
+        
         </div>
     </div>
     );
