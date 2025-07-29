@@ -7,7 +7,7 @@ const EditCharacterForm = ({ character, setCharacter, onSubmit, onDelete }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className="hard-shadow">
       <label>Name:</label>
       <input
         type="text"

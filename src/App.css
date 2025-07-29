@@ -1,6 +1,314 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  /* Neobrutalist Color Palette */
+  --background: #1A1A1A; /* Off-black for the main background */
+  --primary: #F4D738;   /* Bright yellow for accents and highlights */
+  --secondary: #FF6B6B; /* Hot pink for other accents */
+  --foreground: #FFFFFF; /* White for text */
+  --dark-ui: #2a2a2a;      /* Dark color for UI elements like cards */
+  --border-color: #000000; /* Black for all borders */
+
+  font-family: "Public Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--foreground);
+  background-color: var(--background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.bitcount-prop-single {
+  font-family: "Bitcount Prop Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+
+.public-sans {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 20px;
+}
+
+.hard-shadow {
+  box-shadow: 4px 4px 0px var(--border-color);
+}
+
+.header {
+  background: var(--dark-ui);
+  padding: 1rem;
   text-align: center;
+  border-bottom: 4px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-family: "Bitcount Prop Single", system-ui;
+  color: var(--primary);
+  text-shadow: 3px 3px 0px var(--secondary);
+  font-size: 2.5rem;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  margin-top: 30px;
+}
+
+
+.sidebar {
+  width: 250px;
+  min-width: 220px;
+  background: var(--dark-ui);
+  border-right: 4px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-components ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar-components li {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.sidebar-components a {
+  display: block;
+  padding: 1rem 0.5rem;
+  border: 3px solid var(--border-color);
+  background: var(--background);
+  color: var(--primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease-out, background-color 0.2s;
+}
+
+.sidebar-components a:hover {
+  background-color: var(--primary);
+  color: var(--border-color);
+  transform: translate(-4px, -4px);
+}
+
+.primary-content {
+  flex: 1;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #F8D6B3;
+  border: 4px solid var(--border-color);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px var(--primary);
+}
+
+.card img {
+  width: 70%;
+  height: 70%;
+  image-rendering: pixelated;
+  margin-bottom: 1rem;
+  border: 3px solid var(--border-color);
+  background-color: #444; /* Background for the image frame */
+}
+
+.card h2 {
+    color: var(--primary);
+    background: var(--secondary);
+    padding: 0.5rem;
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    border: 2px solid var(--border-color);
+    text-shadow: 2px 2px 0px var(--border-color);
+}
+
+.card p {
+    background-color: var(--background);
+    border: 2px solid var(--border-color);
+    padding: 0.25rem;
+    margin: 0.25rem 0;
+    font-size: .9rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.card a {
+    margin-top: 1rem;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+form {
+  background: var(--dark-ui);
+  border: 4px solid var(--border-color);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  color: var(--foreground);
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+.img-options {
+  margin-top: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.img-options img {
+  width: 54px;
+  height: 54px;
+  image-rendering: pixelated;
+  border: 2px solid var(--border-color);
+  background: var(--background);
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.img-options img:hover {
+  transform: scale(1.05);
+  border-color: var(--secondary);
+}
+
+.images {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img-options img.selected {
+  border: 3px solid var(--secondary);
+  box-shadow: 0 0 8px var(--secondary);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 3px solid var(--border-color);
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Bitcount Prop Single", system-ui;
+  font-size: 1.25rem;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+button, input[type="submit"] {
+  width: 100%;
+  margin-top: 1.5rem;
+  background: var(--primary);
+  border: 3px solid var(--border-color);
+  padding: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--border-color);
+  font-family: "Bitcount Prop Single", system-ui;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover, input[type="submit"]:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 0px var(--border-color);
+}
+
+button.deleteBtn, .home-create {
+    background-color: var(--secondary);
+    color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 4px solid var(--border-color);
+    box-sizing: border-box;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+  }
+}
+
+.home-landing {
+  text-align: center;
+  background: var(--dark-ui);
+  border: 4px solid var(--border-color);
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 8px 8px 0 var(--border-color);
+}
+
+h2 {
+  font-family: "Bitcount Prop Single", system-ui;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-shadow: 3px 3px 0px var(--secondary);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-create :link {
+  text-decoration: none;
+  font-weight: 500;
+  text-shadow: #000000 2px 2px;
 }

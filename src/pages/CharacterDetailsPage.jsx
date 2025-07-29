@@ -36,7 +36,7 @@ const CharacterDetailsPage = () => {
 
     return (
         <div>
-            <h1>Character Details Page</h1>
+            <h2 className="home-landing">Pet Details</h2>
             <CharacterDetails character={character} />
             <div className="primary-content">
                 <Outlet />

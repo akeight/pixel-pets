@@ -4,7 +4,7 @@ Submitted by: **Allyson Keightley**
 
 This web app: **iPixel Pets is a character creation web app built with React and Supabase, designed to demonstrate dynamic form handling, real-time database integration, and RESTful CRUD operations in a clean and scalable frontend architecture. Users can create, customize, and manage their own pixel characters.**
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Required Features
 
@@ -43,13 +43,13 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] The user can choose images for their added crewmate.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./public/pixel-pets.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with ...  
@@ -58,7 +58,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+A couple challenges that I faced building this were around getting the layout and routing set up. That and a couple bugs that took me a while to uncover took up a lot of the time, but I enjoyed the practice and figuring it out step by step.
 
 ## License
 

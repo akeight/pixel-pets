@@ -24,14 +24,16 @@ const CharacterGalleryPage = () => {
 
 
     return (
-        <div>
-            <h1>Character Gallery Page</h1>
-            <p>You have {characters.length} pixel pets!</p>
+        <>
+            <div className="home-landing">
+            <h2>Pixel Pet Hub</h2>
+            <h4>You have {characters.length} pixel pets!</h4>
+            </div>
             <CharacterList characters={characters} />
             <div className="primary-content">
                 <Outlet />
             </div>
-        </div>
+        </>
     );
 }
 

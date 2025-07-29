@@ -70,6 +70,7 @@ const AddCharacterPage = () => {
 
     return (
         <div>
+            <h2 className="home-landing">Get Creative</h2>
             <AddCharacterForm character={character} handleImageSelect={handleImageSelect} handleCategoryChange={handleCategoryChange} handleChange={handleChange} onSubmit={addCharacter} imageOptions={imageOptions}/>
         </div>
     );

@@ -70,7 +70,7 @@ const EditCharacterPage = () => {
 
     return (
         <div>
-            <h1>Update Character Page</h1>
+            <h2 className="home-landing">Edit Pixel Pet</h2>
             <EditCharacterForm character={character} setCharacter={setCharacter} onSubmit={editCharacter} onDelete={deleteCharacter}/>
         </div>
         

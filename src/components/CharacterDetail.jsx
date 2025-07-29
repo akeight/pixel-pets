@@ -7,9 +7,9 @@ const CharacterDetails = ({character}) => {
   const formatted = localDate.toLocaleString();
 
   return (
-    <div className="character-details">
+    <div className="card">
       <img src={character.img_Url} alt={character.character_name} />
-      <h1>{character.character_name}</h1>
+      <h2>{character.character_name}</h2>
       <p>Class: {character.class}</p>
       <p>Protection: {character.protection}</p>
       <p>Agility: {character.agility}</p>

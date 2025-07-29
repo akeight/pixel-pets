@@ -5,8 +5,8 @@ function AddCharacterForm({ character, handleChange, handleCategoryChange, handl
 
   return (
     <>
-    <form onSubmit={onSubmit}>
-      <h1>Create Your Character</h1>
+    <form onSubmit={onSubmit} className="hard-shadow">
+      <h1>Create Your Pixel Pet</h1>
 
       {/* 1. Category Selection */}
       <div className="category">
@@ -22,9 +22,9 @@ function AddCharacterForm({ character, handleChange, handleCategoryChange, handl
       {/* 2. Show Image Options Based on Category */}
       <div className="img-options">
         {character.class && (
-          <div style={{ marginTop: "1rem" }}>
+          <div>
             <label>Choose an Image:</label>
-            <div style={{ display: "flex", gap: "1rem" }}>
+            <div className="images">
               {imageOptions[character.class].map((img) => (
                 <img
                   key={img}
@@ -34,7 +34,7 @@ function AddCharacterForm({ character, handleChange, handleCategoryChange, handl
                     width: 100,
                     height: 100,
                     border:
-                      character.img_Url === img ? "3px solid hotpink" : "1px solid gray",
+                      character.img_Url === img ? "3px solid #FF6B6B" : "1px solid gray",
                     cursor: "pointer",
                   }}
                   onClick={() => handleImageSelect(img)}
@@ -83,7 +83,7 @@ function AddCharacterForm({ character, handleChange, handleCategoryChange, handl
           
 
           <button type="submit">
-            {pending ? "Adding..." : "Add Character"}
+            {pending ? "Adding..." : "Add!"}
           </button>
         </div>
       )}
