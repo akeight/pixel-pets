@@ -2,7 +2,7 @@
 
 Submitted by: **Allyson Keightley**
 
-This web app: **iPixel Pets is a character creation web app built with React and Supabase, designed to demonstrate dynamic form handling, real-time database integration, and RESTful CRUD operations in a clean and scalable frontend architecture. Users can create, customize, and manage their own pixel characters.**
+This web app: **Pixel Pets is a character creation web app built with React and Supabase, designed to demonstrate dynamic form handling, real-time database integration, and RESTful CRUD operations in a clean and scalable frontend architecture. Users can create, customize, and manage their own pixel characters.**
 
 Time spent: **10** hours spent in total
 
