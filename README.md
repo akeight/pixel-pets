@@ -49,7 +49,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./public/pixel-pets.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./public/pixel_pets.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with ...  
