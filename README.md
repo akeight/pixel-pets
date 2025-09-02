@@ -1,4 +1,4 @@
-# Web Development Project 7 - *Pixel Pets*
+# *Pixel Pets*
 
 Submitted by: **Allyson Keightley**
 
@@ -37,8 +37,6 @@ The following **optional** features are implemented:
   - Based on the category value, users are allowed to access only a subset of the possible attributes
 - [x] A section of the summary page, displays summary statistics about a user’s crew on their crew page
   - e.g., the percent of members with a certain attribute 
-- [ ] The summary page displays a custom “success” metric about a user’s crew which changes the look of the crewmate list
-  - e.g., a pirate crew’s predicted success at commandeering a new galley
 
 
 The following **additional** features are implemented:
@@ -56,9 +54,6 @@ GIF created with ...
 
 [Kap](https://getkap.co/) for macOS
 
-## Notes
-
-A couple challenges that I faced building this were around getting the layout and routing set up. That and a couple bugs that took me a while to uncover took up a lot of the time, but I enjoyed the practice and figuring it out step by step.
 
 ## License
 
